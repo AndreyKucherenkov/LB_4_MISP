@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TableTranspositionCipher: Исходный файл modBetaCipher.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TableTranspositionCipher
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">modBetaCipher.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="modBetaCipher_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cctype&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;locale&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;codecvt&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmodBetaCipher.html">modBetaCipher</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Объявление приватных членов класса</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#aa464de99f167caeddb62a26f941104d1">   29</a></span>&#160;    std::wstring_convert&lt;std::codecvt_utf8&lt;wchar_t&gt;, <span class="keywordtype">wchar_t</span>&gt; <a class="code" href="classmodBetaCipher.html#aa464de99f167caeddb62a26f941104d1">codec</a>; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a0cf3613064fbd0174890a5027ab1db27">   30</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#a0cf3613064fbd0174890a5027ab1db27">numAlpha</a> = L<span class="stringliteral">&quot;АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ&quot;</span>; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#aacab20b0aa5491cc2467ce20ff659f1d">   31</a></span>&#160;    std::map &lt;wchar_t,int&gt; <a class="code" href="classmodBetaCipher.html#aacab20b0aa5491cc2467ce20ff659f1d">alphaNum</a>; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a5a3b99a030609e61cc5972cb69dc8f56">   32</a></span>&#160;    std::vector &lt;int&gt; <a class="code" href="classmodBetaCipher.html#a5a3b99a030609e61cc5972cb69dc8f56">key</a>; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a174de426491da960e792298d08608a98">   39</a></span>&#160;    std::vector&lt;int&gt; <a class="code" href="classmodBetaCipher.html#a174de426491da960e792298d08608a98">convert</a>(<span class="keyword">const</span> std::wstring&amp; ws); </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a513302a2596f5f995cbb2429540b67ce">   46</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#a513302a2596f5f995cbb2429540b67ce">convert</a>(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; v); </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#af5b7caff16b39a314a52ed1494c3a2a3">   53</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#af5b7caff16b39a314a52ed1494c3a2a3">getValidKey</a>(<span class="keyword">const</span> std::wstring &amp; ws); </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a7d584b7e092413ffe1a26b94206b349b">   60</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#a7d584b7e092413ffe1a26b94206b349b">getValidOpenText</a>(<span class="keyword">const</span> std::wstring &amp; ws); </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a999d5fa8b12df7e97e17730df8ca4ce1">   67</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#a999d5fa8b12df7e97e17730df8ca4ce1">getValidCipherText</a>(<span class="keyword">const</span> std::wstring &amp; ws); </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a638076643fd15865ec4f6245acdde08e">   69</a></span>&#160;    <a class="code" href="classmodBetaCipher.html#a638076643fd15865ec4f6245acdde08e">modBetaCipher</a>()=<span class="keyword">delete</span>; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#ad0c3104fe946b5f496ae66d332fb5164">   76</a></span>&#160;    <a class="code" href="classmodBetaCipher.html#ad0c3104fe946b5f496ae66d332fb5164">modBetaCipher</a>(<span class="keyword">const</span> std::wstring&amp; wskey); </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a7cc82a80e0a15dcb0d43122bec087f18">   82</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#a7cc82a80e0a15dcb0d43122bec087f18">encrypt</a>(<span class="keyword">const</span> std::wstring&amp; open_text); </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classmodBetaCipher.html#a99fb2808d8ef8e0548c7c526d0ac095a">   88</a></span>&#160;    std::wstring <a class="code" href="classmodBetaCipher.html#a99fb2808d8ef8e0548c7c526d0ac095a">decrypt</a>(<span class="keyword">const</span> std::wstring&amp; cipher_text); </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classcipher__error.html">   96</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcipher__error.html">cipher_error</a>: <span class="keyword">public</span> std::invalid_argument</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">   99</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">cipher_error</a> (<span class="keyword">const</span> std::string&amp; what_arg): </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        std::invalid_argument(what_arg) {} </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">  101</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">cipher_error</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* what_arg): </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::invalid_argument(what_arg) {} </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="ttc" id="aclasscipher__error_html"><div class="ttname"><a href="classcipher__error.html">cipher_error</a></div><div class="ttdoc">Класс исключений</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:97</div></div>
+<div class="ttc" id="aclasscipher__error_html_a18cf27d9c2cd2538d3cb8f17e9a55f3e"><div class="ttname"><a href="classcipher__error.html#a18cf27d9c2cd2538d3cb8f17e9a55f3e">cipher_error::cipher_error</a></div><div class="ttdeci">cipher_error(const char *what_arg)</div><div class="ttdoc">Вызов конструктора базового класса с передачей параметра</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:101</div></div>
+<div class="ttc" id="aclasscipher__error_html_aac662e216a84bfeb873303c7b88d029e"><div class="ttname"><a href="classcipher__error.html#aac662e216a84bfeb873303c7b88d029e">cipher_error::cipher_error</a></div><div class="ttdeci">cipher_error(const std::string &amp;what_arg)</div><div class="ttdoc">Вызов конструктора базового класса с передачей параметра</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:99</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html"><div class="ttname"><a href="classmodBetaCipher.html">modBetaCipher</a></div><div class="ttdoc">Шифрование методом Гронсфельда</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:26</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a0cf3613064fbd0174890a5027ab1db27"><div class="ttname"><a href="classmodBetaCipher.html#a0cf3613064fbd0174890a5027ab1db27">modBetaCipher::numAlpha</a></div><div class="ttdeci">std::wstring numAlpha</div><div class="ttdoc">Алфавит</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:30</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a174de426491da960e792298d08608a98"><div class="ttname"><a href="classmodBetaCipher.html#a174de426491da960e792298d08608a98">modBetaCipher::convert</a></div><div class="ttdeci">std::vector&lt; int &gt; convert(const std::wstring &amp;ws)</div><div class="ttdoc">Метод преобразования вектора в строку</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a513302a2596f5f995cbb2429540b67ce"><div class="ttname"><a href="classmodBetaCipher.html#a513302a2596f5f995cbb2429540b67ce">modBetaCipher::convert</a></div><div class="ttdeci">std::wstring convert(const std::vector&lt; int &gt; &amp;v)</div><div class="ttdoc">Метод преобразования строки в вектор</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a5a3b99a030609e61cc5972cb69dc8f56"><div class="ttname"><a href="classmodBetaCipher.html#a5a3b99a030609e61cc5972cb69dc8f56">modBetaCipher::key</a></div><div class="ttdeci">std::vector&lt; int &gt; key</div><div class="ttdoc">Ключ шифрования/дешифрования</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:32</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a638076643fd15865ec4f6245acdde08e"><div class="ttname"><a href="classmodBetaCipher.html#a638076643fd15865ec4f6245acdde08e">modBetaCipher::modBetaCipher</a></div><div class="ttdeci">modBetaCipher()=delete</div><div class="ttdoc">Удаляем конструктор по умолчанию</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a7cc82a80e0a15dcb0d43122bec087f18"><div class="ttname"><a href="classmodBetaCipher.html#a7cc82a80e0a15dcb0d43122bec087f18">modBetaCipher::encrypt</a></div><div class="ttdeci">std::wstring encrypt(const std::wstring &amp;open_text)</div><div class="ttdoc">Функция зашифрования</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a7d584b7e092413ffe1a26b94206b349b"><div class="ttname"><a href="classmodBetaCipher.html#a7d584b7e092413ffe1a26b94206b349b">modBetaCipher::getValidOpenText</a></div><div class="ttdeci">std::wstring getValidOpenText(const std::wstring &amp;ws)</div><div class="ttdoc">Метод проверки текста</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a999d5fa8b12df7e97e17730df8ca4ce1"><div class="ttname"><a href="classmodBetaCipher.html#a999d5fa8b12df7e97e17730df8ca4ce1">modBetaCipher::getValidCipherText</a></div><div class="ttdeci">std::wstring getValidCipherText(const std::wstring &amp;ws)</div><div class="ttdoc">Метод проверки зашифрованного текста</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_a99fb2808d8ef8e0548c7c526d0ac095a"><div class="ttname"><a href="classmodBetaCipher.html#a99fb2808d8ef8e0548c7c526d0ac095a">modBetaCipher::decrypt</a></div><div class="ttdeci">std::wstring decrypt(const std::wstring &amp;cipher_text)</div><div class="ttdoc">Функция расшифрования</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_aa464de99f167caeddb62a26f941104d1"><div class="ttname"><a href="classmodBetaCipher.html#aa464de99f167caeddb62a26f941104d1">modBetaCipher::codec</a></div><div class="ttdeci">std::wstring_convert&lt; std::codecvt_utf8&lt; wchar_t &gt;, wchar_t &gt; codec</div><div class="ttdoc">Используется для конвертации между std::wstring и UTF-8.</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:29</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_aacab20b0aa5491cc2467ce20ff659f1d"><div class="ttname"><a href="classmodBetaCipher.html#aacab20b0aa5491cc2467ce20ff659f1d">modBetaCipher::alphaNum</a></div><div class="ttdeci">std::map&lt; wchar_t, int &gt; alphaNum</div><div class="ttdoc">Сопоставление символов алфавита и их числовых значений</div><div class="ttdef"><b>Definition:</b> modBetaCipher.h:31</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_ad0c3104fe946b5f496ae66d332fb5164"><div class="ttname"><a href="classmodBetaCipher.html#ad0c3104fe946b5f496ae66d332fb5164">modBetaCipher::modBetaCipher</a></div><div class="ttdeci">modBetaCipher(const std::wstring &amp;wskey)</div><div class="ttdoc">Конструктор для установки ключа</div></div>
+<div class="ttc" id="aclassmodBetaCipher_html_af5b7caff16b39a314a52ed1494c3a2a3"><div class="ttname"><a href="classmodBetaCipher.html#af5b7caff16b39a314a52ed1494c3a2a3">modBetaCipher::getValidKey</a></div><div class="ttdeci">std::wstring getValidKey(const std::wstring &amp;ws)</div><div class="ttdoc">Метод проверки ключа</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
